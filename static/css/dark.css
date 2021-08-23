@@ -1,0 +1,127 @@
+/*
+Hrushikesh Vaidya, @hrushikeshrv on GitHub
+
+Contains CSS color properties for dark mode.
+*/
+:root {
+    --background-light-3: rgb(140, 140, 140);
+    --background-light-2: rgb(112, 112, 112);
+    --background-light-1: rgb(81, 81, 81);
+    --background: rgb(45, 45, 45);
+    --background-dark-1: rgb(30, 30, 30);
+    --background-dark-2: rgb(15, 15, 15);
+    --background-dark-3: rgb(5, 5, 5);
+    --background-dark-4: rgb(5, 5, 5);
+    --default-font-color: white;
+    --muted-font-color: rgb(186, 186, 186);
+}
+
+hr {
+    background-color: white;
+    height: 1px;
+    border: none;
+}
+
+label {
+    color: var(--primary-light-2);
+}
+
+input[type='text'],
+input[type='password'],
+input[type='search'],
+input[type='email'],
+input[type='url'],
+input[type='date'],
+input[type='time'],
+input[type='month'],
+input[type='number'],
+textarea {
+    border: 2px solid var(--background);
+}
+
+.link-dropdown .link-contents {
+    background-color: var(--background-dark-1);
+}
+
+.btn-success {
+    background-color: var(--background-dark-1);
+    color: var(--success-green);
+}
+
+.svg-success {
+    stroke: var(--success-dark-2);
+}
+
+.svg-primary-color {
+    stroke: var(--primary-color);
+}
+
+.subtitle-container {
+    font-weight: 200;
+}
+
+.word-highlight {
+    color: var(--primary-light-1);
+}
+
+.message-success {
+    color: var(--success-light-3);
+    background-color: var(--success-dark-3);
+}
+
+.message-error {
+    color: var(--error-light-3);
+    background-color: var(--error-dark-3);
+}
+
+.message-warning {
+    color: var(--warning-light-3);
+    background-color: var(--warning-dark-3);
+}
+
+.bg-darker {
+    background-color: var(--background-dark-1);
+}
+/*Works the same as bg-dark in dark mode, works differently in light mode*/
+.bg-dark-1 {
+    background-color: var(--background-dark-1);
+}
+
+.test-card-container .test {
+    border: 2px solid var(--primary-color);
+}
+
+.notable-alumni {
+    background-color: var(--background-light-2);
+    border: 2px solid var(--background-dark-2);
+}
+
+table .username-col .user-mini-card {
+    background-color: var(--background-dark-3);
+    border: 2px solid var(--primary-color);
+}
+
+.question-list .question {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.class-card {
+    border: 2px solid var(--primary-color);
+}
+
+#step-count {
+    color: var(--primary-light-1);
+}
+
+input[type=radio]:checked ~ .check::before, input[type=checkbox]:checked ~ .checkbox-check::before{
+    background: var(--success-light-2);
+}
+
+input[type=radio]:checked ~ label, input[type=checkbox]:checked ~ label{
+    color: var(--success-light-3);
+}
+
+.donutSpinner {
+    border: 2px solid black;
+    border-left-color: var(--primary-color);
+}
