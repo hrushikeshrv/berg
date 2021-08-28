@@ -3355,3 +3355,33 @@ input[type=radio]:checked ~ .check, input[type=checkbox]:checked ~ .checkbox-che
 .test-question-list .question-card:hover {
     border-color: var(--primary-dark-1);
 }
+
+/*
+    static styles
+*/
+
+.static-message {
+    flex-flow: column wrap;
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    border-radius: 6px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--background);
+    z-index: 10;
+    padding: 40px;
+}
+
+@media (max-width: 900px) {
+    .static-message {
+        width: 300px;
+        margin-left: -150px;
+    }
+}
+
+.static-message .static-message-close-button {
+    cursor: pointer;
+}

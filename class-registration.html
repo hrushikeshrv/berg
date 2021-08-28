@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,700&family=JetBrains+Mono:wght@200;300;400;500;600;700;800&family=Major+Mono+Display&family=Staatliches&display=swap" rel="stylesheet">
     <title>
-        Log In | ClassBerg
+        Join ClassBerg | ClassBerg
     </title>
     <link rel="stylesheet" class="color-stylesheet" type="text/css" href="static/css/light.css">
     <link rel="stylesheet" type="text/css" href="static/css/styles.css">
@@ -134,10 +134,10 @@
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
         </span>
-        <span class="mbt-10">You've been logged in :)</span>
+        <span class="mbt-10">Thanks for joining ClassBerg :)</span>
         <span class="mbt-10">
-            Just kidding. This is static site, so your can't log in here. If you're trying to log into your account on
-            classberg, go to <a href="http://classberg.com/u/login" target="_blank">classberg.com/u/login</a>.
+            This is static site, however, so you can't join on this domain. If you want to join ClassBerg,
+            visit <a href="http://classberg.com/class/join">classberg.com/class/join</a>.
         </span>
         <span class="mbt-10">
             Please send me an email at
@@ -147,34 +147,93 @@
             Or you can send me a message on instagram <a href="https://instagram.com/hrushikeshrv" target="_blank">@hrushikeshrv</a>.
         </span>
     </div>
-    <div class='login-container flexbox-column ajc'>
-        <div class='login-form flexbox-column ajc'>
-
-
-            <form action='/u/login' method='POST' class='flexbox-column pad-20 login-form'>
-
-                <input type="hidden" name="csrfmiddlewaretoken" value="Y4DkgebajSuaIM1wxTSfHzdsHfCsMD5D9SLEb3bLIzp4irife0Kp9paVoBIs1Wh3">
-                <div class='mar-10 username-field flexbox-column'>
-                    <label for="id_username">Username:</label>
-                    <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="32" required id="id_username">
-                </div>
-                <div class='mar-10 password-field flexbox-column'>
-                    <label for="id_password">Password:</label>
-                    <input type="password" name="password" autocomplete="current-password" required id="id_password">
-                </div>
-                <div class="flexbox-column btn-container">
-                    <input type='submit' value='Log In'>
-                </div>
-            </form>
+    <div class="flexbox-column pad-30">
+        <h1 class="decorative-heading">Welcome to ClassBerg!</h1>
+        <div class="flexbox-row column-full bg-darker pad-10 mb-30" style="font-family: var(--monospace-font);">
+            <div class="flexbox-column column-third word-highlight">1. Enter Class Details</div>
+            <div class="flexbox-column column-third word-highlight">2. Create Owner Account</div>
+            <div class="flexbox-column column-third">3. Choose your subscription</div>
         </div>
-        <div class='flexbox-column pad-10 mar-20 ajc forgot-password'>
-            <span class="word-highlight">Trouble logging in?</span>
-            <a href='/reset-password'>Forgot Password</a>
-        </div>
-        <div class='flexbox-column pad-5 ajc sign-up'>
-            <span class='word-highlight'>Don't have an account yet?</span>
-            <span class='sign-up-link'><a href='/u/register'>Sign Up</a></span>
-        </div>
+        <form>
+            <input type="hidden" name="csrfmiddlewaretoken" value="Z2t8jioPYzLWi7Y9DrTChACnHjTPEQ3XaQBse7oqngGQSMfSkyLMJqzQoFZPT9fn">
+            <div class="flexbox-column column-twothird center">
+                <h1 class="mono-heading no-margin word-highlight">Step 1 of 3</h1>
+                <div class="flexbox-column form-field">
+                    <label for="class_name">Class Name:</label>
+                    <small>Required</small>
+                    <input type="text" name="class_name" id="class_name" required placeholder="ClassBerg Classes">
+                </div>
+                <div class="flexbox-column form-field">
+                    <label for="class_email">Class Email:</label>
+                    <small>Required</small>
+                    <input type="email" name="class_email" id="class_email" required placeholder="contact@classberg.com">
+                </div>
+                <div class="flexbox-column form-field">
+                    <label for="class_address">Class Address:</label>
+                    <small>Required</small>
+                    <input type="text" required name="class_address" id="class_address" placeholder="Paud Road, Kothrud, Pune">
+                </div>
+                <div class="flexbox-row">
+                    <div class="flexbox-column column-half">
+                        <div class="flexbox-column form-field" style="padding-right: 10px;">
+                            <label for="class_phone">Class Phone:</label>
+                            <small>Required</small>
+                            <input type="text" required name="class_phone" id="class_phone" placeholder="+91 9921333846">
+                        </div>
+                    </div>
+                    <div class="flexbox-column column-half">
+                        <div class="flexbox-column form-field" style="padding-left: 10px;">
+                            <label for="class_website">Class Website:</label>
+                            <small>Required</small>
+                            <input type="url" required name="class_website" id="class_website" placeholder="https://classberg.com">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flexbox-column column-twothird center mt-30">
+                <h1 class="mono-heading word-highlight">Step 2 of 3</h1>
+                <div class="flexbox-row">
+                    <div class="flexbox-column column-half pad-10">
+                        <div class="flexbox-column form-field">
+                            <label for="owner_username">Owner Username:</label>
+                            <small>Required</small>
+                            <input type="text" required autocomplete="off" name="owner_username" id="owner_username" placeholder="Username">
+                            <small id="username-status" style="padding: 3px;"></small>
+                        </div>
+                    </div>
+                    <div class="flexbox-column column-half pad-10">
+                        <div class="flexbox-column form-field">
+                            <label for="owner_email">Owner Email:</label>
+                            <small>Required</small>
+                            <input type="email" required autocomplete="off" name="owner_email" id="owner_email" placeholder="Email">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flexbox-row">
+                    <div class="flexbox-column column-half pad-10">
+                        <div class="flexbox-column form-field">
+                            <label for="owner_password">Owner Password:</label>
+                            <small>Required</small>
+                            <input type="password" required autocomplete="off" name="owner_password" id="owner_password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="flexbox-column column-half pad-10">
+                        <div class="flexbox-column form-field">
+
+                            <label for="owner_password_2">Owner Password:</label>
+                            <small>Required</small>
+                            <input type="password" required autocomplete="off" name="owner_password_2" id="owner_password_2" placeholder="Password Confirmation">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="username-validation" id="validation-url" value="/u/api/username-available">
+            <div class="flexbox-column column-twothird center mt-30">
+                <input type="submit" value="Join ClassBerg" id="submit">
+            </div>
+        </form>
     </div>
 </div>
 

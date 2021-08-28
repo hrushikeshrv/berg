@@ -1,10 +1,451 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TF9GF2DFW7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-TF9GF2DFW7');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name='author' content='Hrushikesh Vaidya | @hrushikeshrv on GitHub'/>
+    <meta name="theme-color" content="rgb(255, 147, 28)"/>
+    <meta name='description' content='ClassBerg provides JEE, MHT-CET, and NEET coaching classes with a fast and simple student testing framework, virtual classrooms, and a custom private question database, in one attractive, easy to use interface.'/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,700&family=JetBrains+Mono:wght@200;300;400;500;600;700;800&family=Major+Mono+Display&family=Staatliches&display=swap" rel="stylesheet">
+    <title>
+        Register | ClassBerg
+    </title>
+    <link rel="stylesheet" class="color-stylesheet" type="text/css" href="static/css/light.css">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <link rel='icon' href='static/media/favicon-32.png'>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$']]
+            },
+            svg: {
+                fontCache: 'global'
+            },
+            options: {
+                menuOptions: {
+                    settings: {
+                        zoom: 'Click',
+                        zscale: '250%',
+                    }
+                }
+            },
+        };
+    </script>
 </head>
 <body>
+<header class="flexbox-column">
+    <div id="top" style="width:0; height:0;"></div>
+    <nav>
+        <div class="logo pad-10">
+            <a href="index.html" style="border-bottom: none;">
+                <img alt="ClassBerg Logo" src='static/media/Logo-264x328.svg' width='40px' height='50px'>
+            </a>
+        </div>
 
+        <div class="nav-link-container">
+            <div class="flexbox-row" id="nav-mobile-controls">
+                <div style="position:relative; margin: 0;">
+
+                    <div class="svg-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+                            <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+                            <path d="M19 11h2m-1 -1v2"></path>
+                        </svg>
+                    </div>
+                    <input type="checkbox" class="theme-change-button" name="lightTheme" checked style="position:absolute; opacity: 0; top: 0; width: 20px; height: 20px; cursor:pointer;">
+
+                </div>
+                <div id="hamburger-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x svg-red" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="nav-link"><a href="about.html">About</a></div>
+            <div class="nav-link"><a href="contact.html">Contact Us</a></div>
+            <div class="nav-link"><a href="pricing.html">Pricing</a></div>
+            <div class="nav-link"><a href="features.html">Features</a></div>
+            <div class="nav-link"><a href="login.html">Login</a></div>
+            <div class="nav-link"><a href="register.html">Sign Up</a></div>
+        </div>
+        <div id="hamburger-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 svg-color-switch" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <line x1="4" y1="6" x2="20" y2="6"></line>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+                <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+        </div>
+    </nav>
+</header>
+
+<script>
+    const navMenu = document.querySelector('.nav-link-container');
+    const hamburger = document.querySelector('#hamburger-menu');
+    const hamburgerClose = document.querySelector('#hamburger-close');
+
+    hamburger.addEventListener('click', function() {
+        navMenu.style.left = 0;
+    });
+    hamburgerClose.addEventListener('click', function() {
+        navMenu.removeAttribute('style');
+    });
+
+    const dropdowns = document.querySelectorAll('.link-dropdown');
+    dropdowns.forEach(el => {
+        el.addEventListener('click', function() {
+            this.querySelector('.link-contents').style.top = 0;
+        })
+    })
+
+    const linkCollapse = document.querySelectorAll('.link-collapse');
+    const ddContents = document.querySelectorAll('.link-contents');
+    linkCollapse.forEach(el => {
+        el.addEventListener('click', hideNav);
+    })
+
+    function hideNav(evt) {
+        ddContents.forEach(el => {
+            el.removeAttribute('style');
+        })
+        evt.stopPropagation();
+    }
+</script>
+<div class="body-container">
+    <div class="static-message hidden aifs" id="static-form-submitted">
+        <span class="static-message-close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x svg-red" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </span>
+        <span class="mbt-10">Thanks for registering :)</span>
+        <span class="mbt-10">
+            This is static site, however, so your account can't actually be created.
+        </span>
+        <span class="mbt-10">
+            This site is just a frontend, the outer shell of the entire site
+            hosted on <a href="http://classberg.com" target="_blank">classberg.com</a>.
+            Please send me an email at <a href="mailto:hrushikeshrv@gmail.com">hrushikeshrv@gmail.com</a> if you want to contact me.
+        </span>
+        <span class="mbt-10">
+            Or you can send me a message on instagram <a href="https://instagram.com/hrushikeshrv" target="_blank">@hrushikeshrv</a>.
+        </span>
+    </div>
+    <div class="feature-ideology flexbox-column">
+        <h1>We're glad you're joining us!</h1>
+    </div>
+
+    <div class="flexbox-column pad-30 column-twothird center registration-form">
+
+        <input type="hidden" name="username-validation" id="validation-url" value="/u/api/username-available">
+        <form class="flexbox-column registration-form">
+            <input type="hidden" name="csrfmiddlewaretoken" value="GkSOJgyzUYuR1aGbfl3nV9SyobbBu1AfR808E5yajFpLBPXUWsVxnZP15xhBJkMF">
+
+            <div class="flexbox-row pad-10 registration-section">
+                <div class="flexbox-column column-third helper-sidebar">
+                    <h1>Welcome to ClassBerg</h1>
+                    <small>Required Information</small>
+                    <div class="help-text">
+                        <label for="id_username" data-help="true">Your username on the entire website is unique. Choose any one you like, you can always change it later.</label>
+                        <label for="id_password1" data-help="true">Choose a good, strong password.</label>
+                        <label for="id_password2" data-help="true">Enter your password again</label>
+                        <label for="id_email" data-help="true">Enter an email id you check regularly. We don't send you any promotional or spam emails. If you join a class, we will send all your class communication to this email.</label>
+                    </div>
+                </div>
+                <div class="flexbox-column column-twothird">
+                    <fieldset class="flexbox-column">
+                        <legend id="random-legend">Let's get you set up</legend>
+
+                        <label for='id_username'>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-check svg-color-switch" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                <path d="M16 11l2 2l4 -4" />
+                            </svg> Choose a good unique username*
+                        </label>
+                        <input type="text" name="username" maxlength="32" autofocus required id="id_username">
+                        <small id="username-status" style="padding: 3px;"></small>
+
+
+                        <label for='id_password1'>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-key svg-color-switch" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <circle cx="8" cy="15" r="4" />
+                                <line x1="10.85" y1="12.15" x2="19" y2="4" />
+                                <line x1="18" y1="5" x2="20" y2="7" />
+                                <line x1="15" y1="8" x2="17" y2="10" />
+                            </svg> Create a strong password*
+                        </label>
+                        <input type="password" name="password1" autocomplete="new-password" required id="id_password1">
+
+                        <label for='id_password2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-key svg-color-switch" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <circle cx="8" cy="15" r="4" />
+                                <line x1="10.85" y1="12.15" x2="19" y2="4" />
+                                <line x1="18" y1="5" x2="20" y2="7" />
+                                <line x1="15" y1="8" x2="17" y2="10" />
+                            </svg> Enter your super-strong password again*
+                        </label>
+                        <input type="password" name="password2" autocomplete="new-password" required id="id_password2">
+
+
+
+                        <label for='id_email'>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-at svg-color-switch" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <circle cx="12" cy="12" r="4" />
+                                <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28" />
+                            </svg> Email*
+                        </label>
+                        <input type="email" name="email" maxlength="254" required id="id_email">
+
+
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="flexbox-column column-half center mt-30 btn-container">
+                <input type='submit' value='Register for ClassBerg as a Student' class='pressDownButton' id="submit">
+            </div>
+
+            <div class="flexbox-column column-half center mt-30">
+                <h1 class="mono-heading no-margin message-success">Important!</h1>
+                <div class="big-content">
+                    <p>
+                        Use this form if you are a student trying out ClassBerg or joining your class on ClassBerg.
+                    </p>
+                    <p>
+                        If you are a class owner and you want to join us, use our <a href="class-registration.html">class registration form</a> instead.
+                    </p>
+                    <p>
+                        If you are a teacher or staff member joining your class on ClassBerg, please ask your class owner or administrator
+                        to create your account on your behalf.
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer class="flexbox-column">
+    <div class="flexbox-row column-full jcsb pad-30" style="padding-bottom: 0;">
+        <span></span>
+        <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-python svg-muted space-lr" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M12 9h-7a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h3"></path>
+                      <path d="M12 15h7a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-3"></path>
+                      <path d="M8 9v-4a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v5a2 2 0 0 1 -2 2h-4a2 2 0 0 0 -2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2 -2v-4"></path>
+                      <line x1="11" y1="6" x2="11" y2="6.01"></line>
+                      <line x1="13" y1="18" x2="13" y2="18.01"></line>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-stripe svg-muted space-lr" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M11.453 8.056c0 -.623 .518 -.979 1.442 -.979c1.69 0 3.41 .343 4.605 .923l.5 -4c-.948 -.449 -2.82 -1 -5.5 -1c-1.895 0 -3.373 .087 -4.5 1c-1.172 .956 -2 2.33 -2 4c0 3.03 1.958 4.906 5 6c1.961 .69 3 .743 3 1.5c0 .735 -.851 1.5 -2 1.5c-1.423 0 -3.963 -.609 -5.5 -1.5l-.5 4c1.321 .734 3.474 1.5 6 1.5c2.004 0 3.957 -.468 5.084 -1.36c1.263 -.979 1.916 -2.268 1.916 -4.14c0 -3.096 -1.915 -4.547 -5.003 -5.637c-1.646 -.605 -2.544 -1.07 -2.544 -1.807z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github svg-muted space-lr" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tabler svg-muted space-lr" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M8 9l3 3l-3 3" />
+                      <line x1="13" y1="15" x2="16" y2="15" />
+                      <rect x="4" y="4" width="16" height="16" rx="4" />
+                    </svg>
+                </span>
+    </div>
+    <div class="flexbox-row jcsb pad-30">
+        <div class="logo flexbox-column ajc">
+            <a href="/" style="border-bottom: none;">
+                <img alt="ClassBerg Logo" src='static/media/Logo-264x328.svg' width='80px' height='100px'>
+            </a>
+        </div>
+        <nav class="flexbox-row">
+            <div class="flexbox-column">
+                <div class="nav-link pad-10"><a href="privacy.html">Privacy Policy</a></div>
+                <div class="nav-link pad-10"><a href="tos.html">Terms of Service</a></div>
+                <div class="nav-link pad-10"><a href="pricing.html">Pricing</a></div>
+            </div>
+            <div class="flexbox-column">
+                <div class="nav-link pad-10"><a href="contact.html">Contact Us</a></div>
+                <div class="nav-link pad-10"><a href="about.html">About Us</a></div>
+                <div class="nav-link pad-10"><a href="features.html">Features</a></div>
+            </div>
+            <div class="flexbox-column">
+                <div class="nav-link pad-10"><a href="error-report.html">Error Report</a></div>
+                <div class="nav-link pad-10"><a href="feature-request.html">Feature Request</a></div>
+
+                <div class="nav-link pad-10"><a href="login.html">Login</a></div>
+                <div class="nav-link pad-10"><a href="register.html">Sign Up</a></div>
+
+            </div>
+        </nav>
+    </div>
+    <div class="flexbox-row column-full ajc pad-10">
+        <address class="flexbox-row ajc">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright svg-muted" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M14.5 9a3.5 4 0 1 0 0 6"></path>
+            </svg>
+            <span class="space-lr"><a href="https://hrus.in" style="color: var(--muted-font-color);">Hrushikesh Vaidya</a></span>
+        </address>
+    </div>
+</footer>
+<div class="hidden">
+    <input type="hidden" id="light-theme-url" value="static/css/light.css">
+    <input type="hidden" id="dark-theme-url" value="static/css/dark.css">
+</div>
+<script>
+    //<!--    Show and hide release notes    -->
+    const cross = document.querySelector('.close-button');
+    const showBtn = document.querySelector('.release-notes-show');
+    const releaseNotes = document.querySelector('.release-notes');
+
+    showBtn.addEventListener('click', () => {
+        releaseNotes.style.display = 'block';
+        releaseNotes.style.opacity = '1';
+        releaseNotes.style.zIndex = '5';
+    });
+
+    cross.addEventListener('click', () => {
+        releaseNotes.removeAttribute('style');
+    });
+
+    //    Show and hide student features or class features
+    const classFeaturesToggle = document.querySelector('#class-feature-toggle');
+    const studentFeaturesToggle = document.querySelector('#student-feature-toggle');
+    const classCtas = document.querySelector('#class-ctas');
+    const studentCtas = document.querySelector('#student-ctas');
+
+    const arrowSVG = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right svg-primary-color" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <line x1="15" y1="16" x2="19" y2="12" />
+                        <line x1="15" y1="8" x2="19" y2="12" />
+                    </svg>
+                `;
+
+    studentFeaturesToggle.addEventListener('click', function() {
+        studentFeaturesToggle.querySelector('.svg-container').innerHTML = arrowSVG;
+        studentCtas.removeAttribute('style');
+        studentFeaturesToggle.classList.add('active-cta-class');
+        classCtas.style.display = 'none';
+        classFeaturesToggle.querySelector('.svg-container').innerHTML = '';
+        classFeaturesToggle.classList.remove('active-cta-class');
+    });
+    classFeaturesToggle.addEventListener('click', function() {
+        classFeaturesToggle.querySelector('.svg-container').innerHTML = arrowSVG;
+        classCtas.removeAttribute('style');
+        classFeaturesToggle.classList.add('active-cta-class');
+        studentCtas.style.display = 'none';
+        studentFeaturesToggle.querySelector('.svg-container').innerHTML = '';
+        studentFeaturesToggle.classList.remove('active-cta-class');
+    });
+</script>
+
+<script>
+    const lightThemeURL = document.querySelector('#light-theme-url').value;
+    const darkThemeURL = document.querySelector('#dark-theme-url').value;
+    const stylesheetEl = document.querySelector('.color-stylesheet');
+    const themeChangeButton = document.querySelector('.theme-change-button');
+
+    const lightThemeSVG = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-up" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                          <circle cx="12" cy="12" r="3" />
+                          <line x1="12" y1="5" x2="12" y2="3" />
+                          <line x1="17" y1="7" x2="18.4" y2="5.6" />
+                          <line x1="19" y1="12" x2="21" y2="12" />
+                          <line x1="17" y1="17" x2="18.4" y2="18.4" />
+                          <line x1="12" y1="19" x2="12" y2="21" />
+                          <line x1="7" y1="17" x2="5.6" y2="18.4" />
+                          <line x1="6" y1="12" x2="4" y2="12" />
+                          <line x1="7" y1="7" x2="5.6" y2="5.6" />
+                        </svg>
+                    `;
+
+    const darkThemeSVG = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                          <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                          <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+                          <path d="M19 11h2m-1 -1v2" />
+                        </svg>
+                    `;
+
+    themeChangeButton.addEventListener('click', function(evt) {
+        if (!evt.target.checked) {
+            stylesheetEl.href = darkThemeURL;
+            evt.target.parentElement.querySelector('.svg-container').innerHTML = lightThemeSVG;
+        }
+        else {
+            stylesheetEl.href = lightThemeURL;
+            evt.target.parentElement.querySelector('.svg-container').innerHTML = darkThemeSVG;
+        }
+    });
+</script>
+<script>
+    const submitBtn = document.querySelector('input[type="submit"]');
+    const submittedMessage = document.querySelector('.static-message');
+    const submittedMessageClose = submittedMessage.querySelector('.static-message-close-button');
+
+    submitBtn.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        submittedMessage.classList.remove('hidden');
+        submittedMessage.style.display = 'flex';
+    })
+    submittedMessageClose.addEventListener('click', function() {
+        submittedMessage.classList.add('hidden');
+        submittedMessage.removeAttribute('style');
+    })
+</script>
+<script>
+    const inputs = document.querySelectorAll('.registration-section input');
+    let currentLabel = inputs[0].labels[0];
+    currentLabel.style.display = 'block';
+
+    inputs.forEach(el => {
+        el.addEventListener('click', function() {
+            currentLabel.style.display = 'none';
+            el.labels[0].style.display = 'block';
+            currentLabel = el.labels[0];
+        })
+    })
+</script>
+<script>
+    const legend = document.querySelector('#random-legend');
+    const legendTexts = [
+        'Let\'s get you set up',
+        'Come, weary traveller, register for ClassBerg',
+        'ᕕ( ᐛ )ᕗ',
+        '•ᴗ•',
+        '(☞ﾟヮﾟ)☞',
+        '(⌐■_■)',
+        '¯\\_(ツ)_/¯',
+        '(∩｀-´)⊃━☆ﾟ.*･｡ﾟ',
+    ]
+    legend.innerHTML = legendTexts[Math.floor(Math.random()*legendTexts.length)];
+</script>
 </body>
 </html>

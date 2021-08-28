@@ -1,10 +1,359 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TF9GF2DFW7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-TF9GF2DFW7');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name='author' content='Hrushikesh Vaidya | @hrushikeshrv on GitHub'/>
+    <meta name="theme-color" content="rgb(255, 147, 28)"/>
+    <meta name='description' content='ClassBerg provides JEE, MHT-CET, and NEET coaching classes with a fast and simple student testing framework, virtual classrooms, and a custom private question database, in one attractive, easy to use interface.'/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,700&family=JetBrains+Mono:wght@200;300;400;500;600;700;800&family=Major+Mono+Display&family=Staatliches&display=swap" rel="stylesheet">
+    <title>
+        Privacy Policy | ClassBerg
+    </title>
+    <link rel="stylesheet" class="color-stylesheet" type="text/css" href="static/css/light.css">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <link rel='icon' href='static/media/favicon-32.png'>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$']]
+            },
+            svg: {
+                fontCache: 'global'
+            },
+            options: {
+                menuOptions: {
+                    settings: {
+                        zoom: 'Click',
+                        zscale: '250%',
+                    }
+                }
+            },
+        };
+    </script>
 </head>
 <body>
+<header class="flexbox-column">
+    <div id="top" style="width:0; height:0;"></div>
+    <nav>
+        <div class="logo pad-10">
+            <a href="index.html" style="border-bottom: none;">
+                <img alt="ClassBerg Logo" src='static/media/Logo-264x328.svg' width='40px' height='50px'>
+            </a>
+        </div>
 
+        <div class="nav-link-container">
+            <div class="flexbox-row" id="nav-mobile-controls">
+                <div style="position:relative; margin: 0;">
+
+                    <div class="svg-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+                            <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+                            <path d="M19 11h2m-1 -1v2"></path>
+                        </svg>
+                    </div>
+                    <input type="checkbox" class="theme-change-button" name="lightTheme" checked style="position:absolute; opacity: 0; top: 0; width: 20px; height: 20px; cursor:pointer;">
+
+                </div>
+                <div id="hamburger-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x svg-red" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="nav-link"><a href="about.html">About</a></div>
+            <div class="nav-link"><a href="contact.html">Contact Us</a></div>
+            <div class="nav-link"><a href="pricing.html">Pricing</a></div>
+            <div class="nav-link"><a href="features.html">Features</a></div>
+            <div class="nav-link"><a href="login.html">Login</a></div>
+            <div class="nav-link"><a href="register.html">Sign Up</a></div>
+        </div>
+        <div id="hamburger-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 svg-color-switch" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <line x1="4" y1="6" x2="20" y2="6"></line>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+                <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+        </div>
+    </nav>
+</header>
+
+<script>
+    const navMenu = document.querySelector('.nav-link-container');
+    const hamburger = document.querySelector('#hamburger-menu');
+    const hamburgerClose = document.querySelector('#hamburger-close');
+
+    hamburger.addEventListener('click', function() {
+        navMenu.style.left = 0;
+    });
+    hamburgerClose.addEventListener('click', function() {
+        navMenu.removeAttribute('style');
+    });
+
+    const dropdowns = document.querySelectorAll('.link-dropdown');
+    dropdowns.forEach(el => {
+        el.addEventListener('click', function() {
+            this.querySelector('.link-contents').style.top = 0;
+        })
+    })
+
+    const linkCollapse = document.querySelectorAll('.link-collapse');
+    const ddContents = document.querySelectorAll('.link-contents');
+    linkCollapse.forEach(el => {
+        el.addEventListener('click', hideNav);
+    })
+
+    function hideNav(evt) {
+        ddContents.forEach(el => {
+            el.removeAttribute('style');
+        })
+        evt.stopPropagation();
+    }
+</script>
+<div class="body-container">
+    <div class="flexbox-column pad-30 aifs">
+        <h1 class="decorative-heading mb-10 center">Our Privacy Policy</h1>
+        <code class="center">How we protect and use data that belongs to you</code>
+        <p></p>
+        <div class="column-twothird center">
+            <p>Your privacy is important to us. It is ClassBerg&#39;s policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, <a href="https://classberg.com">https://classberg.com</a>, and other sites we own and operate. </p>
+            <p>This policy is effective as of 10 June 2021 and was last updated on 10 June 2021. </p>
+            <h3>Information We Collect</h3>
+            <p>Information we collect includes both information you knowingly and actively provide us when using or participating in any of our services and promotions, and any information automatically sent by your devices in the course of accessing our products and services. </p>
+            <h4>Log Data</h4>
+            <p>When you visit our website, our servers may automatically log the standard data provided by your web browser. It may include your device’s IP address, your browser type and version, the pages you visit, the time and date of your visit, the time spent on each page, other details about your visit, and technical details that occur in conjunction with any errors you may encounter. </p>
+            <h4>Personal Information</h4>
+            <p>We may ask for personal information which may include one or more of the following: </p>
+            <ul>
+                <li>Name</li>
+                <li>Email</li>
+                <li>Social media profiles</li>
+                <li>Phone/mobile number</li>
+            </ul>
+            <h4>Legitimate Reasons for Processing Your Personal Information</h4>
+            <p>We only collect and use your personal information when we have a legitimate reason for doing so. In which instance, we only collect personal information that is reasonably necessary to provide our services to you. </p>
+            <h4>Collection and Use of Information</h4>
+            <p>We may collect personal information from you when you do any of the following on our website: </p>
+            <ul>
+                <li>Use a mobile device or web browser to access our content</li>
+                <li>Contact us via email, social media, or on any similar technologies</li>
+                <li>Register yourself with our website</li>
+                <li>Someone on your behalf (such as a student's teacher or class owner) registers you with our website</li>
+            </ul>
+            <p>We may collect, hold, use, and disclose information for the following purposes, and personal information will not be further processed in a manner that is incompatible with these purposes: </p>
+            <p>We may collect, hold, use, and disclose information for the following purposes, and personal information will not be further processed in a manner that is incompatible with these purposes: </p>
+            <ul>
+                <li>to contact and communicate with you</li>
+                <li>to enable you to access and use our website, associated applications, and associated social media platforms</li>
+                <li>for internal record keeping and administrative purposes</li>
+                <li>to comply with our legal obligations and resolve any disputes that we may have</li>
+                <li>for security and fraud prevention, and to ensure that our sites and apps are safe, secure, and used in line with our terms of use</li>
+            </ul>
+            <p>Please be aware that we may combine information we collect about you with general information or research data we receive from other trusted sources. </p>
+            <h4>Security of Your Personal Information</h4>
+            <p>When we collect and process personal information, and while we retain this information, we will protect it within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use, or modification. </p>
+            <p>Although we will do our best to protect the personal information you provide to us, we advise that no method of electronic transmission or storage is 100% secure, and no one can guarantee absolute data security. We will comply with laws applicable to us in respect of any data breach. </p>
+            <p>You are responsible for selecting any password and its overall security strength, ensuring the security of your own information within the bounds of our services. </p>
+            <h4>How Long We Keep Your Personal Information</h4>
+            <p>We keep your personal information only for as long as we need to. This time period may depend on what we are using your information for, in accordance with this privacy policy. If your personal information is no longer required, we will delete it or make it anonymous by removing all details that identify you. </p>
+            <p>However, if necessary, we may retain your personal information for our compliance with a legal, accounting, or reporting obligation or for archiving purposes in the public interest, scientific, or historical research purposes or statistical purposes. </p>
+            <h3>Children’s Privacy</h3>
+            <p>We do not aim any of our products or services directly at children under the age of 13, and we do not knowingly collect personal information about children under 13. </p>
+            <h3>International Transfers of Personal Information</h3>
+            <p>The personal information we collect is stored and/or processed where we or our partners, affiliates, and third-party providers maintain facilities. Please be aware that the locations to which we store, process, or transfer your personal information may not have the same data protection laws as the country in which you initially provided the information. If we transfer your personal information to third parties in other countries: (i) we will perform those transfers in accordance with the requirements of applicable law; and (ii) we will protect the transferred personal information in accordance with this privacy policy. </p>
+            <h3>Your Rights and Controlling Your Personal Information</h3>
+            <p>You always retain the right to withhold personal information from us, with the understanding that your experience of our website may be affected. We will not discriminate against you for exercising any of your rights over your personal information. If you do provide us with personal information you understand that we will collect, hold, use and disclose it in accordance with this privacy policy. You retain the right to request details of any personal information we hold about you. </p>
+            <p>If we receive personal information about you from a third party, we will protect it as set out in this privacy policy. If you are a third party providing personal information about somebody else, you represent and warrant that you have such person’s consent to provide the personal information to us. </p>
+            <p>If you have previously agreed to us using your personal information for direct marketing purposes, you may change your mind at any time. We will provide you with the ability to unsubscribe from our email-database or opt out of communications. Please be aware we may need to request specific information from you to help us confirm your identity. </p>
+            <p>If you believe that any information we hold about you is inaccurate, out of date, incomplete, irrelevant, or misleading, please contact us using the details provided in this privacy policy. We will take reasonable steps to correct any information found to be inaccurate, incomplete, misleading, or out of date. </p>
+            <p>If you believe that we have breached a relevant data protection law and wish to make a complaint, please contact us using the details below and provide us with full details of the alleged breach. We will promptly investigate your complaint and respond to you, in writing, setting out the outcome of our investigation and the steps we will take to deal with your complaint. You also have the right to contact a regulatory body or data protection authority in relation to your complaint. </p>
+            <h3>Limits of Our Policy</h3>
+            <p>Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and policies of those sites, and cannot accept responsibility or liability for their respective privacy practices. </p>
+            <h3>Changes to This Policy</h3>
+            <p>At our discretion, we may change our privacy policy to reflect updates to our business processes, current acceptable practices, or legislative or regulatory changes. If we decide to change this privacy policy, we will post the changes here at the same link by which you are accessing this privacy policy. </p>
+            <p>If required by law, we will get your permission or give you the opportunity to opt in to or opt out of, as applicable, any new uses of your personal information. </p>
+            <h3>Contact Us</h3>
+            <p>For any questions or concerns regarding your privacy, you may contact us using the following details: </p>
+            <p><a href="mailto:contact@classberg.com" target="_blank">contact@classberg.com</a><br />
+                <a href="contact.html">https://classberg.com/contact</a> </p>
+        </div>
+    </div>
+</div>
+
+<footer class="flexbox-column">
+    <div class="flexbox-row column-full jcsb pad-30" style="padding-bottom: 0;">
+        <span></span>
+        <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-python svg-muted space-lr" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M12 9h-7a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h3"></path>
+                      <path d="M12 15h7a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-3"></path>
+                      <path d="M8 9v-4a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v5a2 2 0 0 1 -2 2h-4a2 2 0 0 0 -2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2 -2v-4"></path>
+                      <line x1="11" y1="6" x2="11" y2="6.01"></line>
+                      <line x1="13" y1="18" x2="13" y2="18.01"></line>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-stripe svg-muted space-lr" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M11.453 8.056c0 -.623 .518 -.979 1.442 -.979c1.69 0 3.41 .343 4.605 .923l.5 -4c-.948 -.449 -2.82 -1 -5.5 -1c-1.895 0 -3.373 .087 -4.5 1c-1.172 .956 -2 2.33 -2 4c0 3.03 1.958 4.906 5 6c1.961 .69 3 .743 3 1.5c0 .735 -.851 1.5 -2 1.5c-1.423 0 -3.963 -.609 -5.5 -1.5l-.5 4c1.321 .734 3.474 1.5 6 1.5c2.004 0 3.957 -.468 5.084 -1.36c1.263 -.979 1.916 -2.268 1.916 -4.14c0 -3.096 -1.915 -4.547 -5.003 -5.637c-1.646 -.605 -2.544 -1.07 -2.544 -1.807z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github svg-muted space-lr" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tabler svg-muted space-lr" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M8 9l3 3l-3 3" />
+                      <line x1="13" y1="15" x2="16" y2="15" />
+                      <rect x="4" y="4" width="16" height="16" rx="4" />
+                    </svg>
+                </span>
+    </div>
+    <div class="flexbox-row jcsb pad-30">
+        <div class="logo flexbox-column ajc">
+            <a href="/" style="border-bottom: none;">
+                <img alt="ClassBerg Logo" src='static/media/Logo-264x328.svg' width='80px' height='100px'>
+            </a>
+        </div>
+        <nav class="flexbox-row">
+            <div class="flexbox-column">
+                <div class="nav-link pad-10"><a href="privacy.html">Privacy Policy</a></div>
+                <div class="nav-link pad-10"><a href="tos.html">Terms of Service</a></div>
+                <div class="nav-link pad-10"><a href="pricing.html">Pricing</a></div>
+            </div>
+            <div class="flexbox-column">
+                <div class="nav-link pad-10"><a href="contact.html">Contact Us</a></div>
+                <div class="nav-link pad-10"><a href="about.html">About Us</a></div>
+                <div class="nav-link pad-10"><a href="features.html">Features</a></div>
+            </div>
+            <div class="flexbox-column">
+                <div class="nav-link pad-10"><a href="error-report.html">Error Report</a></div>
+                <div class="nav-link pad-10"><a href="feature-request.html">Feature Request</a></div>
+
+                <div class="nav-link pad-10"><a href="login.html">Login</a></div>
+                <div class="nav-link pad-10"><a href="register.html">Sign Up</a></div>
+
+            </div>
+        </nav>
+    </div>
+    <div class="flexbox-row column-full ajc pad-10">
+        <address class="flexbox-row ajc">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright svg-muted" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M14.5 9a3.5 4 0 1 0 0 6"></path>
+            </svg>
+            <span class="space-lr"><a href="https://hrus.in" style="color: var(--muted-font-color);">Hrushikesh Vaidya</a></span>
+        </address>
+    </div>
+</footer>
+<div class="hidden">
+    <input type="hidden" id="light-theme-url" value="static/css/light.css">
+    <input type="hidden" id="dark-theme-url" value="static/css/dark.css">
+</div>
+<script>
+    //<!--    Show and hide release notes    -->
+    const cross = document.querySelector('.close-button');
+    const showBtn = document.querySelector('.release-notes-show');
+    const releaseNotes = document.querySelector('.release-notes');
+
+    showBtn.addEventListener('click', () => {
+        releaseNotes.style.display = 'block';
+        releaseNotes.style.opacity = '1';
+        releaseNotes.style.zIndex = '5';
+    });
+
+    cross.addEventListener('click', () => {
+        releaseNotes.removeAttribute('style');
+    });
+
+    //    Show and hide student features or class features
+    const classFeaturesToggle = document.querySelector('#class-feature-toggle');
+    const studentFeaturesToggle = document.querySelector('#student-feature-toggle');
+    const classCtas = document.querySelector('#class-ctas');
+    const studentCtas = document.querySelector('#student-ctas');
+
+    const arrowSVG = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right svg-primary-color" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <line x1="15" y1="16" x2="19" y2="12" />
+                        <line x1="15" y1="8" x2="19" y2="12" />
+                    </svg>
+                `;
+
+    studentFeaturesToggle.addEventListener('click', function() {
+        studentFeaturesToggle.querySelector('.svg-container').innerHTML = arrowSVG;
+        studentCtas.removeAttribute('style');
+        studentFeaturesToggle.classList.add('active-cta-class');
+        classCtas.style.display = 'none';
+        classFeaturesToggle.querySelector('.svg-container').innerHTML = '';
+        classFeaturesToggle.classList.remove('active-cta-class');
+    });
+    classFeaturesToggle.addEventListener('click', function() {
+        classFeaturesToggle.querySelector('.svg-container').innerHTML = arrowSVG;
+        classCtas.removeAttribute('style');
+        classFeaturesToggle.classList.add('active-cta-class');
+        studentCtas.style.display = 'none';
+        studentFeaturesToggle.querySelector('.svg-container').innerHTML = '';
+        studentFeaturesToggle.classList.remove('active-cta-class');
+    });
+</script>
+
+<script>
+    const lightThemeURL = document.querySelector('#light-theme-url').value;
+    const darkThemeURL = document.querySelector('#dark-theme-url').value;
+    const stylesheetEl = document.querySelector('.color-stylesheet');
+    const themeChangeButton = document.querySelector('.theme-change-button');
+
+    const lightThemeSVG = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-up" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                          <circle cx="12" cy="12" r="3" />
+                          <line x1="12" y1="5" x2="12" y2="3" />
+                          <line x1="17" y1="7" x2="18.4" y2="5.6" />
+                          <line x1="19" y1="12" x2="21" y2="12" />
+                          <line x1="17" y1="17" x2="18.4" y2="18.4" />
+                          <line x1="12" y1="19" x2="12" y2="21" />
+                          <line x1="7" y1="17" x2="5.6" y2="18.4" />
+                          <line x1="6" y1="12" x2="4" y2="12" />
+                          <line x1="7" y1="7" x2="5.6" y2="5.6" />
+                        </svg>
+                    `;
+
+    const darkThemeSVG = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                          <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                          <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+                          <path d="M19 11h2m-1 -1v2" />
+                        </svg>
+                    `;
+
+    themeChangeButton.addEventListener('click', function(evt) {
+        if (!evt.target.checked) {
+            stylesheetEl.href = darkThemeURL;
+            evt.target.parentElement.querySelector('.svg-container').innerHTML = lightThemeSVG;
+        }
+        else {
+            stylesheetEl.href = lightThemeURL;
+            evt.target.parentElement.querySelector('.svg-container').innerHTML = darkThemeSVG;
+        }
+    });
+</script>
 </body>
 </html>
